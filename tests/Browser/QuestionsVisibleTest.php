@@ -41,10 +41,6 @@ class QuestionsVisibleTest extends DuskTestCase
 			$questionTwoOptionTwo = factory(App\Questionoption::class)->create([
 				'questionsid'=>$question2->id
 				]);
-			/*$answerQuestionOne = factory(App\Answer::class)->create([
-				'answersetsid'=>$answerset->id,
-				'questionoptionsid'=>$questionOneOptionOne->id
-				]);*/
 			$browser->loginAs($user)
 							 ->visit('/questions')
 							 ->assertSee($questionset->name)
